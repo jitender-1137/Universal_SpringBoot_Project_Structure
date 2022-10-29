@@ -12,6 +12,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import org.springframework.context.annotation.Configuration;
 
 @Entity
 @Table(name = "employee")
@@ -27,6 +28,9 @@ public class Employee {
 
     @Column(name = "emp_name")
     private String name;
+
+    @Column(name = "username")
+    private String userName;
 
     @Column(name = "designation")
     private String designation;

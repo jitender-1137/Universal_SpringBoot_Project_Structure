@@ -37,7 +37,8 @@ public class CommonConfig implements WebMvcConfigurer {
     }
 
     @Bean
-    ModelMapper modelMapper() {
-        return modelMapper();
+    public ModelMapper modelMapper() {
+        ModelMapper modelMapper = new ModelMapper();
+        return modelMapper;
     }
 }

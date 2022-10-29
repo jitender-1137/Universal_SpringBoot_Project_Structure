@@ -43,7 +43,7 @@ public class EmployeeController {
     }
 
 
-    @PostMapping("/add")
+    @RequestMapping("/add")
     public ResponseDto addEmplyee(@RequestBody @Valid EmployeeCo employeeCo) {
         logger.info("Controller save employee start");
         EmployeeDto employeeDto2 = employeeService.saveEmployee(employeeCo);

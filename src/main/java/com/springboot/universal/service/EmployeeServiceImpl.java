@@ -42,16 +42,16 @@ public class EmployeeServiceImpl implements EmployeeService {
         log.info("Fetching Employee as per following queries : {}", searchParams);
         List<EmployeeDto> employeeDtoList = new LinkedList<>();
         long start = System.currentTimeMillis();
-        EntryItem<Employee> employeeEntryItem =
-                employeeDao.findByCriteriaFields(genericSearchFilter, pageNumber, pageSize);
-        log.info("Time taken to get employees from employeeService /  cache= {} ms", (System.currentTimeMillis() - start));
-        if (!CollectionUtils.isEmpty(employeeEntryItem.getItems())) {
-            employeeEntryItem.getItems().forEach(employee -> {
-                EmployeeDto employeeDto = modelMapper.map(employee, EmployeeDto.class);
-                employeeDtoList.add(employeeDto);
-            });
-        }
-        return new EntryItem<>(employeeEntryItem.getTotalItemsCount(), employeeDtoList);
+//        EntryItem<Employee> employeeEntryItem = employeeDao.findByCriteriaFields(genericSearchFilter, pageNumber, pageSize);
+//        log.info("Time taken to get employees from employeeService /  cache= {} ms", (System.currentTimeMillis() - start));
+//        if (!CollectionUtils.isEmpty(employeeEntryItem.getItems())) {
+//            employeeEntryItem.getItems().forEach(employee -> {
+//                EmployeeDto employeeDto = modelMapper.map(employee, EmployeeDto.class);
+//                employeeDtoList.add(employeeDto);
+//            });
+//        }
+//        return new EntryItem<>(employeeEntryItem.getTotalItemsCount(), employeeDtoList);
+        return null;
     }
 
     @Override
